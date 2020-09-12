@@ -1,9 +1,13 @@
-RSpec.describe RunnerSaidNoOneEver do
-  it "has a version number" do
-    expect(RunnerSaidNoOneEver::VERSION).not_to be nil
+require('spec_helper')
+
+RSpec.describe('Something') do
+  def app
+    Sinatra::Application
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it 'says hello' do
+    get '/'
+    expect(last_response).to(be_ok)
+    expect(last_response.body).to(eq('Hello World'))
   end
 end

@@ -8,7 +8,9 @@ WIP.
 
 ## Purpose
 
-The idea here is to delay 1 second or more (given you custom configuration) to answer a request, thus you can use this behavior for interesting tests, like dispatching 10 requests from you back-end to this service and do it efficiently with some approaches like through [Threads](https://en.wikipedia.org/wiki/Thread_(computing)#Thread_and_fiber_issues) or [Coroutines](https://en.wikipedia.org/wiki/Coroutine). 
+The idea here is to delay 1 second or more (given you custom configuration) to answer a request, thus you can use this behavior for interesting tests, like dispatching 10 requests from you back-end to this service and do it efficiently with some approaches like through [Threads](https://en.wikipedia.org/wiki/Thread_(computing)#Thread_and_fiber_issues) or [Coroutines](https://en.wikipedia.org/wiki/Coroutine).
+
+Why Sinatra? See more [here](https://www.ruby-toolbox.com/categories/web_app_frameworks). 
 
 ## Lessons learned
 
@@ -25,3 +27,9 @@ bin
 ```
 
 See more details [here](https://bundler.io/guides/creating_gem.html).
+
+### Interesting links
+
+- [How to create a Ruby API with Sinatra](https://x-team.com/blog/how-to-create-a-ruby-api-with-sinatra/)
+- [Where does bundler store gems?](https://stackoverflow.com/a/32638896/3899136)
+- [Create a custom RuboCop action](https://www.jetbrains.com/help/ruby/rubocop.html#rubocop_external_tool)
