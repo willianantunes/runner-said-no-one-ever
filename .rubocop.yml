@@ -21,3 +21,5 @@ Style/DocumentationMethod:
   Enabled: false
 Lint/ConstantResolution:
   Enabled: false
+Metrics/BlockLength:
+  Enabled: false
