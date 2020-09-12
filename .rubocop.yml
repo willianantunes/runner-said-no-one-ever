@@ -17,5 +17,7 @@ Documentation:
   Enabled: false
 Style/FrozenStringLiteralComment:
   Enabled: false
+Style/DocumentationMethod:
+  Enabled: false
 Lint/ConstantResolution:
   Enabled: false

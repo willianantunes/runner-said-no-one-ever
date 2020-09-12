@@ -9,6 +9,7 @@ GEM
       i18n (>= 1.6, < 2)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
+    multi_json (1.15.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     parallel (1.19.2)
@@ -58,6 +59,12 @@ GEM
       rack (~> 2.2)
       rack-protection (= 2.1.0)
       tilt (~> 2.0)
+    sinatra-contrib (2.1.0)
+      multi_json
+      mustermann (~> 1.0)
+      rack-protection (= 2.1.0)
+      sinatra (= 2.1.0)
+      tilt (~> 2.0)
     tilt (2.0.10)
     unicode-display_width (1.7.0)
 
@@ -72,6 +79,7 @@ DEPENDENCIES
   rubocop
   simplecov
   sinatra
+  sinatra-contrib
 
 RUBY VERSION
    ruby 2.7.1p83

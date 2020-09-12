@@ -1,12 +1,7 @@
-# require('runner_said_no_one_ever/version')
-require('sinatra')
+require('sinatra/base')
+require('sinatra/namespace')
+require('runner_said_no_one_ever/controllers/api/v1/movies_controller')
 
-# module RunnerSaidNoOneEver
-#   get '/' do
-#     "Hello World #{params[:name]}".strip
-#   end
-# end
-
-get '/' do
-  "Hello World #{params[:name]}".strip
+class RunnerSaidNoOneEver < Sinatra::Base
+  use Controllers::API::V1::MoviesController
 end

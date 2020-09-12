@@ -4,6 +4,7 @@ ruby '2.7.1'
 
 gem 'rake', require: false
 gem 'sinatra'
+gem 'sinatra-contrib'
 gem 'faker'
 
 group :development, :test do
