@@ -23,7 +23,7 @@ module Business
     end
 
     def self.random_character(movie_name)
-      return unless movie_name.empty?
+      return if movie_name.empty?
 
       selected_movie = MOVIES.find { |entry| entry.last == movie_name }
       return selected_movie.first.character if selected_movie
