@@ -19,6 +19,8 @@ Style/FrozenStringLiteralComment:
   Enabled: false
 Style/DocumentationMethod:
   Enabled: false
+Style/RedundantReturn:
+  Enabled: false
 Lint/ConstantResolution:
   Enabled: false
 Metrics/BlockLength:

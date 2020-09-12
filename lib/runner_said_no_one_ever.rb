@@ -1,6 +1,8 @@
 require('sinatra/base')
 require('sinatra/namespace')
 require_relative('runner_said_no_one_ever/support/sinatra_helpers')
+require('faker')
+require_relative('runner_said_no_one_ever/business/film_specialist')
 require_relative('runner_said_no_one_ever/controllers/api/v1/movies_controller')
 require_relative('runner_said_no_one_ever/controllers/api/v1/diablo_controller')
 
