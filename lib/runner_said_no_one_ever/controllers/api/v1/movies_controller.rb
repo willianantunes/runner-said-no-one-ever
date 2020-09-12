@@ -1,9 +1,7 @@
 module Controllers
   module API
     module V1
-      class MoviesController < Sinatra::Base
-        register Sinatra::Namespace
-
+      class MoviesController < CustomSinatraBase
         get '/' do
           "Hello World #{params[:name]}".strip
         end

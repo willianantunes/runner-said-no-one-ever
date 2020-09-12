@@ -38,3 +38,4 @@ See more details [here](https://bundler.io/guides/creating_gem.html).
 - [sckott/cchecksapi](https://github.com/sckott/cchecksapi)
 - [syxanash/gitron](https://github.com/syxanash/gitron)
 - [kuntoaji/sinator](https://github.com/kuntoaji/sinator)
+- [T-Dnzt/booklist](https://github.com/T-Dnzt/booklist)
