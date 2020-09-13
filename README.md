@@ -4,6 +4,16 @@ Find a movie or a character from it and this API will reply to you as soon as po
 
 ## Running it
 
+Just issue:
+
+    docker-compose up
+
+And with `HTTPie`:
+
+    http GET :8000/api/v1/deckard-cain name==Cockatiel
+
+## Executing tests
+
 WIP.
 
 ## Purpose
@@ -30,11 +40,17 @@ See more details [here](https://bundler.io/guides/creating_gem.html).
 
 ### Interesting links
 
+Articles:
+
 - [How to create a Ruby API with Sinatra](https://x-team.com/blog/how-to-create-a-ruby-api-with-sinatra/)
 - [Where does bundler store gems?](https://stackoverflow.com/a/32638896/3899136)
 - [Create a custom RuboCop action](https://www.jetbrains.com/help/ruby/rubocop.html#rubocop_external_tool)
 - [Make Rubocop Part of Your Tests](https://blog.trueheart78.com/ruby/2016/09/18/make-rubocop-part-of-your-tests.html)
 - [Structuring Sinatra Applications](https://nickcharlton.net/posts/structuring-sinatra-applications.html)
+- [Bundler.setup vs. Bundler.require](https://anti-pattern.com/bundler-setup-vs-bundler-require)
+
+Some projects:
+
 - [sckott/usdaplantsapi](https://github.com/sckott/usdaplantsapi)
 - [sckott/cchecksapi](https://github.com/sckott/cchecksapi)
 - [syxanash/gitron](https://github.com/syxanash/gitron)

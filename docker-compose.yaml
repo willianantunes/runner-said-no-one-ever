@@ -1,0 +1,13 @@
+version: "2.4"
+services:
+  app:
+    build:
+      context: .
+    environment:
+      - RACK_ENV=production
+      - APP_ENV=production
+    working_dir: /app
+    ports:
+      - "8000:9292"
+    volumes:
+      - .:/app

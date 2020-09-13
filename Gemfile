@@ -6,6 +6,7 @@ gem 'rake', require: false
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'faker'
+gem 'puma'
 
 group :development, :test do
   gem 'rspec'
