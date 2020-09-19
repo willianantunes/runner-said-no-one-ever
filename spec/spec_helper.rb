@@ -13,4 +13,8 @@ RSpec.configure do |config|
   end
 
   config.include(Rack::Test::Methods)
+
+  def app
+    RunnerSaidNoOneEver
+  end
 end

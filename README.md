@@ -6,15 +6,24 @@ Find a movie or a character from it and this API will reply to you as soon as po
 
 Just issue:
 
-    docker-compose up
+    docker-compose up app
 
 And with `HTTPie`:
 
     http GET :8000/api/v1/deckard-cain name==Cockatiel
 
-## Executing tests
+## Running all tests
 
-WIP.
+Execute the following command:
+
+    docker-compose up tests
+
+And you'll see something like:
+
+```
+Finished in 0.96628 seconds (files took 0.43692 seconds to load)
+5 examples, 0 failures
+```
 
 ## Purpose
 

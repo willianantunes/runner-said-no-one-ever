@@ -11,3 +11,10 @@ services:
       - "8000:9292"
     volumes:
       - .:/app
+  tests:
+    image: ruby:2.7.1
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: >
+      sh -c "bundle install && bundler exec rake"
