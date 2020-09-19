@@ -19,9 +19,18 @@ RSpec.describe(Business::FilmSpecialist) do
     end
 
     it 'should retrieve a random character given desired movie' do
-      some_character = film_specialist.random_character('LordOfTheRings')
+      movie_name = 'LordOfTheRings'
 
-      expect(some_character).not_to(be_empty)
+      movie_class = Faker::Movies::LordOfTheRings
+      fake_value = [movie_class, movie_class.name.split('::').last]
+      fake_character_name = 'Cockatiel'
+
+      expect(movie_class).to(receive(:character).and_return(fake_character_name))
+      expect(Business::MoviesWarehouse).to(receive(:specific_movie).with(movie_name).and_return(fake_value))
+
+      some_character = film_specialist.random_character(movie_name)
+
+      expect(some_character).to(eq(fake_character_name))
     end
   end
 end
