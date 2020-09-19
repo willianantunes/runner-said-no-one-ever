@@ -19,8 +19,8 @@ Style/FrozenStringLiteralComment:
   Enabled: false
 Style/DocumentationMethod:
   Enabled: false
-Style/RedundantReturn:
-  Enabled: false
+Style/ClassMethodsDefinitions:
+  EnforcedStyle: self_class
 Lint/ConstantResolution:
   Enabled: false
 Metrics/BlockLength:

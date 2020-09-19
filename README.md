@@ -58,6 +58,10 @@ Articles:
 - [Structuring Sinatra Applications](https://nickcharlton.net/posts/structuring-sinatra-applications.html)
 - [Bundler.setup vs. Bundler.require](https://anti-pattern.com/bundler-setup-vs-bundler-require)
 
+Discussions:
+
+- [What's the difference between RSpec's subject and let? When should they be used or not?](https://stackoverflow.com/a/38459039/3899136)
+
 Some projects:
 
 - [sckott/usdaplantsapi](https://github.com/sckott/usdaplantsapi)
