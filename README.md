@@ -11,6 +11,7 @@ Just issue:
 And with `HTTPie`:
 
     http GET :8000/api/v1/deckard-cain name==Cockatiel
+    http GET :8000/api/v1/movies
 
 ## Running all tests
 
