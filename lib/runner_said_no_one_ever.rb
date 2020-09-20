@@ -1,5 +1,6 @@
 require('sinatra/base')
 require('sinatra/namespace')
+require_relative('runner_said_no_one_ever/support/utils')
 require_relative('runner_said_no_one_ever/support/sinatra_helpers')
 require('faker')
 require('json')
