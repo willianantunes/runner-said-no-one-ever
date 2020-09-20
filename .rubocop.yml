@@ -19,6 +19,8 @@ Style/FrozenStringLiteralComment:
   Enabled: false
 Style/DocumentationMethod:
   Enabled: false
+Lint/NumberConversion:
+  Enabled: false
 Style/ClassMethodsDefinitions:
   EnforcedStyle: self_class
 Lint/ConstantResolution:

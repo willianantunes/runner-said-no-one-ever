@@ -21,9 +21,7 @@ USER app-user
 
 COPY --chown=app-user:app-user . ./
 
-RUN rm Gemfile Gemfile.lock
-
-# TODO: Healthcheck
+HEALTHCHECK CMD bundle exec ruby healthcheck.rb
 
 # https://puma.io/puma/
 # Without arguments, puma will look for a rackup (.ru) file in the current working directory called config.ru
