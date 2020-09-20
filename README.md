@@ -59,6 +59,7 @@ Articles:
 - [Structuring Sinatra Applications](https://nickcharlton.net/posts/structuring-sinatra-applications.html)
 - [Bundler.setup vs. Bundler.require](https://anti-pattern.com/bundler-setup-vs-bundler-require)
 - [Why is bad specific setup for development, test, production](https://12factor.net/config)
+- [Rack Explained For Ruby Developers](https://www.rubyguides.com/2018/09/rack-middleware/)
 
 Discussions:
 
@@ -72,3 +73,5 @@ Some projects:
 - [kuntoaji/sinator](https://github.com/kuntoaji/sinator)
 - [T-Dnzt/booklist](https://github.com/T-Dnzt/booklist)
 - [nickcharlton/moviesapi](https://github.com/nickcharlton/moviesapi)
+- [FunGoStudios/json-commonlogger](https://github.com/FunGoStudios/json-commonlogger)
+- [kballenegger/rack-json-logs](https://github.com/kballenegger/rack-json-logs)

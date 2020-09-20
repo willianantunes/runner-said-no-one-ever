@@ -13,4 +13,9 @@ class RunnerSaidNoOneEver < Sinatra::Base
   use Controllers::API::V1::MoviesController
   use Controllers::API::V1::DiabloController
   use Controllers::HealthCheckController
+
+  configure do
+    # use Rack::CommonLogger, logger
+    set :logging, true
+  end
 end
