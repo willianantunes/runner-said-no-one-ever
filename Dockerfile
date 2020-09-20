@@ -25,4 +25,4 @@ HEALTHCHECK CMD bundle exec ruby healthcheck.rb
 
 # https://puma.io/puma/
 # Without arguments, puma will look for a rackup (.ru) file in the current working directory called config.ru
-CMD bundle exec puma
+CMD bundle exec puma --config lib/runner_said_no_one_ever/config/puma.rb

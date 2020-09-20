@@ -58,6 +58,7 @@ Articles:
 - [Make Rubocop Part of Your Tests](https://blog.trueheart78.com/ruby/2016/09/18/make-rubocop-part-of-your-tests.html)
 - [Structuring Sinatra Applications](https://nickcharlton.net/posts/structuring-sinatra-applications.html)
 - [Bundler.setup vs. Bundler.require](https://anti-pattern.com/bundler-setup-vs-bundler-require)
+- [Why is bad specific setup for development, test, production](https://12factor.net/config)
 
 Discussions:
 
