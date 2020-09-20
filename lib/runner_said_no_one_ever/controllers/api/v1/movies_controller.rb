@@ -15,6 +15,10 @@ module Controllers
             content_type :json
             { character: character, movie: movie }.to_json
           end
+
+          get '/movies/star-wars' do
+            status 501
+          end
         end
       end
     end

@@ -19,5 +19,10 @@ RSpec.describe(Controllers::API::V1::MoviesController) do
       body_as_json = JSON.parse(last_response.body, { symbolize_names: true })
       expect(body_as_json).to(include(**expected_body))
     end
+
+    it 'should receive 501 as it is not implemented yet' do
+      get "#{request_path}/star-wars"
+      expect(last_response.status).to(be(501))
+    end
   end
 end
