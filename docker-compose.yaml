@@ -3,21 +3,12 @@ services:
   app:
     build:
       context: .
-    environment:
-      - RACK_ENV=production
-      - APP_ENV=production
-      - PUMA_BIND_ADDRESS=0.0.0.0
-      - PUMA_BIND_PORT=8080
-      - PUMA_MIN_THREADS=4
-      - PUMA_MAX_THREADS=20
-      - PUMA_NUMBER_OF_WORKERS=0
-      - PUMA_PERSISTENT_TIMEOUT=20
-      - PUMA_FIRST_DATA_TIMEOUT=30
+    env_file: .env
     working_dir: /app
     ports:
       - "8000:8080"
-    volumes:
-      - .:/app
+#    volumes:
+#      - .:/app
   tests:
     image: ruby:2.7.1
     working_dir: /app

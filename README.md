@@ -4,7 +4,20 @@ Find a movie or a character from it and this API will reply to you as soon as po
 
 ## Running it
 
-Just issue:
+Run NOW through the command:
+
+    docker run --rm --name runner-said-no-one-ever \
+    -e PUMA_BIND_ADDRESS=0.0.0.0 \
+    -e PUMA_BIND_PORT=8080 \
+    -e PUMA_MIN_THREADS=4 \
+    -e PUMA_MAX_THREADS=20 \
+    -e PUMA_NUMBER_OF_WORKERS=0 \
+    -e PUMA_PERSISTENT_TIMEOUT=20 \
+    -e PUMA_FIRST_DATA_TIMEOUT=30 \
+    -p 8000:8080 \
+    willianantunes/runner-said-no-one-ever
+
+If you download the project just issue:
 
     docker-compose up app
 
