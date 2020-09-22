@@ -7,8 +7,8 @@ services:
     working_dir: /app
     ports:
       - "8000:8080"
-#    volumes:
-#      - .:/app
+    volumes:
+      - .:/app
   tests:
     image: ruby:2.7.1
     working_dir: /app

@@ -1,4 +1,6 @@
 require('rack/test')
+require('rack/lint')
+require('rack/mock')
 require('runner_said_no_one_ever')
 
 RSpec.configure do |config|
