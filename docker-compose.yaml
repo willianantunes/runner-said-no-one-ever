@@ -3,12 +3,10 @@ services:
   app:
     build:
       context: .
-    environment:
-      - RACK_ENV=production
-      - APP_ENV=production
+    env_file: .env
     working_dir: /app
     ports:
-      - "8000:9292"
+      - "8000:8080"
     volumes:
       - .:/app
   tests:

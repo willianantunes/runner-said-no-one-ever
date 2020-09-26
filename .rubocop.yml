@@ -21,7 +21,15 @@ Style/DocumentationMethod:
   Enabled: false
 Style/ClassMethodsDefinitions:
   EnforcedStyle: self_class
+Style/MissingElse:
+  Enabled: false
+Style/DisableCopsWithinSourceCodeDirective:
+  Enabled: false
+Lint/NumberConversion:
+  Enabled: false
 Lint/ConstantResolution:
   Enabled: false
 Metrics/BlockLength:
   Enabled: false
+Metrics/MethodLength:
+  Max: 16

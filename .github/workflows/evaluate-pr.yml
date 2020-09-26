@@ -16,3 +16,5 @@ jobs:
           bundler install
       - name: Run tests
         run: bundler exec rake
+      - name: Run code style checker
+        run: bundler exec rubocop --lint
