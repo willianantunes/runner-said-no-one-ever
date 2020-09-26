@@ -24,7 +24,7 @@ RSpec.describe(Support::JsonCommonLogger) do
 
     # TODO: Assert what was received
     # TODO: Emulate user-agent and other properties
-    expect(logger).to(receive(:write).exactly(2).times)
+    expect(logger).to(receive(:write).exactly(1).times)
 
     req.get('/')
   end
@@ -39,8 +39,7 @@ RSpec.describe(Support::JsonCommonLogger) do
       )
     )
 
-    expect(logger).to(receive(:write).with({ jafar: 'iago' }.to_json))
-    expect(logger).to(receive(:write).with("\n"))
+    expect(logger).to(receive(:write).with("#{{ jafar: 'iago' }.to_json}\n"))
     expect(logger).to(receive(:write).exactly(0).times)
 
     req.get('/')

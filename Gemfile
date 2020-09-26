@@ -7,6 +7,7 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'faker'
 gem 'puma'
+gem 'ougai'
 
 group :development, :test do
   gem 'rspec'

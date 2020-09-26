@@ -94,3 +94,4 @@ Some projects:
 - [hx/rack-traffic-logger](https://github.com/hx/rack-traffic-logger)
 - [tilfin/ougai](https://github.com/tilfin/ougai)
 - [mainameiz/huyegger](https://github.com/mainameiz/huyegger)
+- [thisismydesign/easy_logging](https://github.com/thisismydesign/easy_logging)

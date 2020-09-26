@@ -13,6 +13,9 @@ GEM
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.2)
+    oj (3.10.14)
+    ougai (1.8.5)
+      oj (~> 3.10)
     parallel (1.19.2)
     parser (2.7.1.4)
       ast (~> 2.4.1)
@@ -76,6 +79,7 @@ PLATFORMS
 
 DEPENDENCIES
   faker
+  ougai
   puma
   rack-test
   rake

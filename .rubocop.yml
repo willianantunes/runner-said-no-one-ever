@@ -23,6 +23,8 @@ Style/ClassMethodsDefinitions:
   EnforcedStyle: self_class
 Style/MissingElse:
   Enabled: false
+Style/DisableCopsWithinSourceCodeDirective:
+  Enabled: false
 Lint/NumberConversion:
   Enabled: false
 Lint/ConstantResolution:

@@ -2,7 +2,7 @@ module Controllers
   module API
     module V1
       class MoviesController < CustomSinatraBase
-        logger = Support::LogHelper.get_logger(__FILE__)
+        include Support::LogHelper
         film_specialist = Business::FilmSpecialist
 
         namespace '/api/v1' do

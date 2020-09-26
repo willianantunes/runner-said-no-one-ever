@@ -1,10 +1,10 @@
 module Business
   class FilmSpecialist
-    @logger = Support::LogHelper.get_logger(__FILE__)
+    include Support::LogHelper
 
     class << self
       def yell_a_character_and_its_movie
-        @logger.debug('Consulting movies warehouse...')
+        logger.debug('Consulting movies warehouse...')
         selected_movie = MoviesWarehouse.some_movie_from_the_shelf
         random_character = selected_movie.first.character
         [random_character, selected_movie.last]
@@ -13,7 +13,7 @@ module Business
       def random_character(movie_name)
         return if movie_name.empty?
 
-        @logger.debug("Choosing random character from movie #{movie_name}")
+        logger.debug("Choosing random character from movie #{movie_name}")
         selected_movie = MoviesWarehouse.specific_movie(movie_name)
         selected_movie&.first&.character
       end
