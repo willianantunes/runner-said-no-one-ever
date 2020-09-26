@@ -31,3 +31,5 @@ Lint/ConstantResolution:
   Enabled: false
 Metrics/BlockLength:
   Enabled: false
+Metrics/MethodLength:
+  Max: 16

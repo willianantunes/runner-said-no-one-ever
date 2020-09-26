@@ -11,7 +11,6 @@ require_relative('settings')
 bind("tcp://#{Config::Settings::PUMA_BIND_ADDRESS}:#{Config::Settings::PUMA_BIND_PORT}")
 threads(Config::Settings::PUMA_MIN_THREADS, Config::Settings::PUMA_MAX_THREADS)
 workers(Config::Settings::PUMA_NUMBER_OF_WORKERS)
-daemonize(false)
 # The default number of seconds for another request within a persistent session.
 persistent_timeout(Config::Settings::PUMA_PERSISTENT_TIMEOUT)
 # The default number of seconds to wait until we get the first data for the request

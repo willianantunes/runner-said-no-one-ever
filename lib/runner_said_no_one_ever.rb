@@ -1,6 +1,6 @@
 require('faker')
 require('json')
-require('ougai')
+require('logger')
 require('sinatra/base')
 require('sinatra/namespace')
 require_relative('runner_said_no_one_ever/support/logger')

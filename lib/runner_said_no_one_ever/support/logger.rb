@@ -13,9 +13,9 @@ module Support
     class << self
       def included(the_guy_who_included_the_module)
         # https://stackoverflow.com/a/15384720/3899136
-        the_guy_who_included_the_module.send(:prepend, Initializer)
+        the_guy_who_included_the_module.__send__(:prepend, Initializer)
 
-        # Class level private logger method for includer class (the_guy_who_included_the_module)
+        # Class level private logger method for the_guy_who_included_the_module
         class << the_guy_who_included_the_module
           private
 
@@ -25,7 +25,7 @@ module Support
         end
 
         # Initialize class level logger at the time of including
-        the_guy_who_included_the_module.send(:logger)
+        the_guy_who_included_the_module.__send__(:logger)
       end
 
       # Global, memoized, lazy initialized instance of a logger
@@ -34,12 +34,24 @@ module Support
       end
 
       def configure_logger_for(classname)
-        return Ougai::Logger.new($stdout) if Config::Settings::RACK_ENV == :production
-
         logger = Logger.new($stdout)
         # TODO: configure level through ENV
-        logger.level = Logger::INFO
+        logger.level = Config::Settings::PROJECT_LOG_LEVEL
         logger.progname = classname
+
+        if Config::Settings::RACK_ENV == :production
+          logger.formatter =
+            proc do |severity, datetime, prog_name, msg|
+              record = {
+                level: severity,
+                prog_name: prog_name,
+                registered_at: datetime.iso8601(3),
+                message: msg
+              }
+              "#{record.to_json}\n"
+            end
+        end
+
         logger
       end
     end

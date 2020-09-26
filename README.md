@@ -26,6 +26,8 @@ And with `HTTPie`:
     http GET :8000/api/v1/deckard-cain name==Cockatiel
     http GET :8000/api/v1/movies
 
+In order to log as JSON, change `APP_ENV` and `RACK_ENV` value to `production` instead of `development` and run the project again!
+
 ## Running all tests
 
 Execute the following command:

@@ -1,6 +1,11 @@
 require('spec_helper')
 
 RSpec.describe(Support::Utils) do
+  before do
+    stub_const 'SomeGuy', Class.new
+    SomeGuy.class_eval { include Support::Utils }
+  end
+
   context 'when a environment variable is needed' do
     it 'should retrieve the variable' do
       env_key = 'AWS_ACCESS_KEY_ID'
@@ -8,7 +13,7 @@ RSpec.describe(Support::Utils) do
 
       stub_const('ENV', ENV.to_hash.merge(env_key => env_value))
 
-      value = Support::Utils.get_env_or_raise_exception(env_key)
+      value = SomeGuy.get_env_or_raise_exception(env_key)
 
       expect(value).to(eq(env_value))
     end
@@ -18,11 +23,11 @@ RSpec.describe(Support::Utils) do
 
       attempt_to_get_env =
         lambda {
-          Support::Utils.get_env_or_raise_exception(env_key)
+          SomeGuy.get_env_or_raise_exception(env_key)
         }
 
       expected_exception_message = "Environment variable #{env_key} is not set!"
-      expect { attempt_to_get_env.call }.to(raise_error(Support::EnvironmentError, expected_exception_message))
+      expect { attempt_to_get_env.call }.to(raise_error(Support::Utils::EnvironmentError, expected_exception_message))
     end
   end
 end
