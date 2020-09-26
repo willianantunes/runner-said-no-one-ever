@@ -73,7 +73,9 @@ Finished in 0.96628 seconds (files took 0.43692 seconds to load)
 
 ## Purpose
 
-The idea here is to delay 1 second or more (given you custom configuration) to answer a request, thus you can use this behavior for interesting tests, like dispatching 10 requests from you back-end to this service and do it efficiently with some approaches like through [Threads](https://en.wikipedia.org/wiki/Thread_(computing)#Thread_and_fiber_issues) or [Coroutines](https://en.wikipedia.org/wiki/Coroutine).
+The idea here is to delay 1 second or more (given you custom configuration) to answer a request, thus you can use this behavior for interesting tests, like dispatching 10 requests from you back-end to this service and do it efficiently with some approaches like through [Threads](https://en.wikipedia.org/wiki/Thread_(computing)#Thread_and_fiber_issues) or [Coroutines](https://en.wikipedia.org/wiki/Coroutine). See this flow which I used for a [RoR project emulating a Hangman game through an API](https://github.com/willianantunes/hangman-ruby-playground/):
+
+![Sample usage of the Runner #SaidNoOneEver](docs/sample-usage.png)
 
 Why Sinatra? See more [here](https://www.ruby-toolbox.com/categories/web_app_frameworks). 
 
