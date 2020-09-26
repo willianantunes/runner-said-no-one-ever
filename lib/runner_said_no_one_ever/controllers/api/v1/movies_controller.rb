@@ -2,16 +2,20 @@ module Controllers
   module API
     module V1
       class MoviesController < CustomSinatraBase
+        logger = Support::LogHelper.get_logger(__FILE__)
         film_specialist = Business::FilmSpecialist
 
         namespace '/api/v1' do
           get '/movies' do
+            logger.info('Asking film specialist...')
             character, movie = film_specialist.yell_a_character_and_its_movie
 
-            # TODO: Get the value from ENVIRONMENT
             # TODO: Allow the value to be customized through query string
-            sleep 1
+            duration = Config::Settings::DELAY_ANSWER_IN_SECONDS
+            logger.info("Sleeping the following number of seconds: #{duration}")
+            sleep duration
 
+            logger.debug("Character and movie: #{character} / #{movie}")
             content_type :json
             { character: character, movie: movie }.to_json
           end

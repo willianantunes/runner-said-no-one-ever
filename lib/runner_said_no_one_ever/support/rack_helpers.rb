@@ -25,7 +25,7 @@ module Support
       ip_address_header = ENV['RACK_IP_ADDRESS_HEADER'] || 'HTTP_X_FORWARDED_FOR'
       request_id_header = ENV['RACK_REQUEST_ID_HEADER'] || 'HTTP_X_REQUEST_ID'
 
-      log = {
+      message = {
         ip_address: env[ip_address_header] || nil,
         registered_at: now.iso8601(3),
         request_id: env[request_id_header] || nil,
@@ -40,13 +40,16 @@ module Support
         request_time: now - began_at
       }
 
-      log = @custom_log.call(log, status, header, env) if @custom_log
-
-      puts(log)
+      message = @custom_log.call(message, status, header, env) if @custom_log
 
       logger = @logger || env['rack.errors']
-      logger.write(log.to_json)
-      logger.write("\n")
+      record = "#{message.to_json}\n"
+
+      if logger.respond_to?(:write)
+        logger.write(record)
+      else
+        logger << record
+      end
     end
 
     def extract_content_length(headers)

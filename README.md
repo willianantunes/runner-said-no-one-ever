@@ -73,6 +73,8 @@ Articles:
 - [Bundler.setup vs. Bundler.require](https://anti-pattern.com/bundler-setup-vs-bundler-require)
 - [Why is bad specific setup for development, test, production](https://12factor.net/config)
 - [Rack Explained For Ruby Developers](https://www.rubyguides.com/2018/09/rack-middleware/)
+- [Logging with Ruby Sinatra and Passenger](http://sundivenetworks.com/archive/2014/logging-with-sinatra-and-passenger.html)
+- [The recommendation of structured logging and the reason I have made Ougai for Ruby](https://dev.to/tilfin/the-recommendation-of-structured-logging-and-the-reason-i-have-made-ougai-for-ruby-39pn)
 
 Discussions:
 
@@ -88,3 +90,7 @@ Some projects:
 - [nickcharlton/moviesapi](https://github.com/nickcharlton/moviesapi)
 - [FunGoStudios/json-commonlogger](https://github.com/FunGoStudios/json-commonlogger)
 - [kballenegger/rack-json-logs](https://github.com/kballenegger/rack-json-logs)
+- [sinatra-logger](https://rubygems.org/gems/sinatra-logger/versions/0.3.2)
+- [hx/rack-traffic-logger](https://github.com/hx/rack-traffic-logger)
+- [tilfin/ougai](https://github.com/tilfin/ougai)
+- [mainameiz/huyegger](https://github.com/mainameiz/huyegger)
