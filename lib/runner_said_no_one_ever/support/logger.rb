@@ -45,6 +45,8 @@ module Support
               record = {
                 level: severity,
                 prog_name: prog_name,
+                pid: Process.pid,
+                thread_id: Thread.current.object_id,
                 registered_at: datetime.iso8601(3),
                 message: msg
               }

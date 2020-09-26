@@ -5,6 +5,7 @@
 
 # This is needed cause puma loads this file directly
 require('json')
+require('logger')
 require_relative('../support/utils')
 require_relative('settings')
 
@@ -24,7 +25,7 @@ if Config::Settings::RACK_ENV == :production
   log_formatter do |msg|
     {
       registered_at: Time.now.iso8601(3),
-      process_pid: Process.pid,
+      pid: Process.pid,
       thread_id: Thread.current.object_id,
       message: msg
     }.to_json
