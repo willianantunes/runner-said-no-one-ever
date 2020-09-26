@@ -6,7 +6,7 @@ Find a movie or a character from it and this API will reply to you as soon as po
 
 Run NOW through the command:
 
-    docker run --rm --name runner-said-no-one-ever \
+    docker run --rm -it --name runner-said-no-one-ever \
     -e PUMA_BIND_ADDRESS=0.0.0.0 \
     -e PUMA_BIND_PORT=8080 \
     -e PUMA_MIN_THREADS=4 \
@@ -14,6 +14,10 @@ Run NOW through the command:
     -e PUMA_NUMBER_OF_WORKERS=0 \
     -e PUMA_PERSISTENT_TIMEOUT=20 \
     -e PUMA_FIRST_DATA_TIMEOUT=30 \
+    -e RACK_ENV=production \
+    -e APP_ENV=production \
+    -e PROJECT_LOG_LEVEL=DEBUG \
+    -e RACK_IP_ADDRESS_HEADER=REMOTE_ADDR \
     -p 8000:8080 \
     willianantunes/runner-said-no-one-ever
 
