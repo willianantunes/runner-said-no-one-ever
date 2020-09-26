@@ -14,7 +14,7 @@ COPY Gemfile Gemfile.lock ./
 # https://bundler.io/man/bundle-install.1.html#DEPLOYMENT-MODE
 # https://github.com/capistrano/bundler/issues/115
 # https://github.com/rubygems/bundler/issues/7531
-# TODO: Install from lock file
+RUN bundle config set without 'test development' && bundle config set frozen 'true'
 RUN bundle install
 
 USER app-user
