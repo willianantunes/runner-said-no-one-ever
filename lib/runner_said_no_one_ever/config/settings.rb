@@ -8,5 +8,6 @@ module Config
     PUMA_PERSISTENT_TIMEOUT = Support::Utils.get_env_or_raise_exception('PUMA_PERSISTENT_TIMEOUT').to_i
     PUMA_FIRST_DATA_TIMEOUT = Support::Utils.get_env_or_raise_exception('PUMA_FIRST_DATA_TIMEOUT').to_i
     DELAY_ANSWER_IN_SECONDS = ENV.fetch('DELAY_ANSWER_IN_SECONDS', 1).to_i
+    RACK_ENV = Support::Utils.get_env_or_raise_exception('RACK_ENV').to_sym
   end
 end

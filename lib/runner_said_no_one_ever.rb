@@ -13,7 +13,11 @@ require_relative('runner_said_no_one_ever/controllers/api/v1/movies_controller')
 require_relative('runner_said_no_one_ever/controllers/api/v1/diablo_controller')
 
 class RunnerSaidNoOneEver < Sinatra::Base
-  configure do
+  configure :development do
+    use Rack::CommonLogger
+  end
+
+  configure :production do
     use Support::JsonCommonLogger
   end
 

@@ -28,6 +28,8 @@ module Support
       message = {
         ip_address: env[ip_address_header] || nil,
         registered_at: now.iso8601(3),
+        process_pid: Process.pid,
+        thread_id: Thread.current.object_id,
         request_id: env[request_id_header] || nil,
         method: env['REQUEST_METHOD'],
         path: env['PATH_INFO'],
