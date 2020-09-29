@@ -4,11 +4,15 @@ def configure_environment(env_file_location)
 
     key_and_value = line.chomp("\n").split('=', 2)
     key_and_value[1].gsub!(/^"|"$/, '') if ['\'', '"'].include?(key_and_value[1][0])
-    eval "ENV['#{key_and_value[0]}']='#{key_and_value[1] || ''}'" # rubocop:disable Security/Eval, Style/EvalWithLocation
+    eval("ENV['#{key_and_value[0]}']='#{key_and_value[1] || ''}'") # rubocop:disable Security/Eval, Style/EvalWithLocation
   end
 end
 
 configure_environment('.env')
+
+require('simplecov')
+
+SimpleCov.start
 
 require('rack/test')
 require('rack/lint')
