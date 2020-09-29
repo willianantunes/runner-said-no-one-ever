@@ -1,5 +1,7 @@
 # Runner [#SaidNoOneEver](https://twitter.com/hashtag/SaidNoOneEver?src=hashtag_click)
 
+![Build and publish](https://github.com/willianantunes/runner-said-no-one-ever/workflows/Build%20and%20publish/badge.svg?branch=master)
+
 Find a movie or a character from it and this API will reply to you as soon as possible #SaidNoOneEver.
 
 ## Running it
@@ -33,33 +35,33 @@ And with `HTTPie`:
 In order to log as JSON, change `APP_ENV` and `RACK_ENV` value to `production` instead of `development` and run the project again! If you leave as the standard and consult movies endpoint:
 
 ```text
-app_1    | Puma starting in single mode...
-app_1    | * Version 5.0.0 (ruby 2.7.1-p83), codename: Spoony Bard
-app_1    | * Min threads: 4, max threads: 20
-app_1    | * Environment: development
-app_1    | * Listening on http://0.0.0.0:8080
-app_1    | Use Ctrl-C to stop
-app_1    | I, [2020-09-26T20:45:06.062309 #6]  INFO -- Controllers::API::V1::MoviesController: Asking film specialist...
-app_1    | D, [2020-09-26T20:45:06.062394 #6] DEBUG -- Business::FilmSpecialist: Consulting movies warehouse...
-app_1    | I, [2020-09-26T20:45:06.913184 #6]  INFO -- Controllers::API::V1::MoviesController: Sleeping the following number of seconds: 1
-app_1    | D, [2020-09-26T20:45:07.918926 #6] DEBUG -- Controllers::API::V1::MoviesController: Character and movie: Miracle Max / PrincessBride
-app_1    | 172.25.0.1 - - [26/Sep/2020:20:45:07 +0000] "GET /api/v1/movies?greg=mygod&aaaaa=bb HTTP/1.1" 200 51 1.8644
+Puma starting in single mode...
+* Version 5.0.0 (ruby 2.7.1-p83), codename: Spoony Bard
+* Min threads: 4, max threads: 20
+* Environment: development
+* Listening on http://0.0.0.0:8080
+Use Ctrl-C to stop
+I, [2020-09-26T20:45:06.062309 #6]  INFO -- Controllers::API::V1::MoviesController: Asking film specialist...
+D, [2020-09-26T20:45:06.062394 #6] DEBUG -- Business::FilmSpecialist: Consulting movies warehouse...
+I, [2020-09-26T20:45:06.913184 #6]  INFO -- Controllers::API::V1::MoviesController: Sleeping the following number of seconds: 1
+D, [2020-09-26T20:45:07.918926 #6] DEBUG -- Controllers::API::V1::MoviesController: Character and movie: Miracle Max / PrincessBride
+172.25.0.1 - - [26/Sep/2020:20:45:07 +0000] "GET /api/v1/movies?greg=mygod&aaaaa=bb HTTP/1.1" 200 51 1.8644
 ```
 
 Now as `production`:
 
 ```text
-app_1    | {"registered_at":"2020-09-26T20:48:55.182+00:00","pid":7,"thread_id":3380,"message":"Puma starting in single mode..."}
-app_1    | {"registered_at":"2020-09-26T20:48:55.182+00:00","pid":7,"thread_id":3380,"message":"* Version 5.0.0 (ruby 2.7.1-p83), codename: Spoony Bard"}
-app_1    | {"registered_at":"2020-09-26T20:48:55.182+00:00","pid":7,"thread_id":3380,"message":"* Min threads: 4, max threads: 20"}
-app_1    | {"registered_at":"2020-09-26T20:48:55.182+00:00","pid":7,"thread_id":3380,"message":"* Environment: production"}
-app_1    | {"registered_at":"2020-09-26T20:48:55.464+00:00","pid":7,"thread_id":3380,"message":"* Listening on http://0.0.0.0:8080"}
-app_1    | {"registered_at":"2020-09-26T20:48:55.464+00:00","pid":7,"thread_id":3380,"message":"Use Ctrl-C to stop"}
-app_1    | {"level":"INFO","prog_name":"Controllers::API::V1::MoviesController","pid":7,"thread_id":3720,"registered_at":"2020-09-26T20:48:57.928+00:00","message":"Asking film specialist..."}
-app_1    | {"level":"DEBUG","prog_name":"Business::FilmSpecialist","pid":7,"thread_id":3720,"registered_at":"2020-09-26T20:48:57.928+00:00","message":"Consulting movies warehouse..."}
-app_1    | {"level":"INFO","prog_name":"Controllers::API::V1::MoviesController","pid":7,"thread_id":3720,"registered_at":"2020-09-26T20:48:58.805+00:00","message":"Sleeping the following number of seconds: 1"}
-app_1    | {"level":"DEBUG","prog_name":"Controllers::API::V1::MoviesController","pid":7,"thread_id":3720,"registered_at":"2020-09-26T20:48:59.807+00:00","message":"Character and movie: Carc / Hobbit"}
-app_1    | {"ip_address":"172.25.0.1","registered_at":"2020-09-26T20:48:59.814+00:00","pid":7,"thread_id":3720,"request_id":null,"method":"GET","path":"/api/v1/movies","query":"?greg=mygod&aaaaa=bb","version":"HTTP/1.1","status":"200","response_length":"37","referer":null,"user_agent":"HTTPie/2.2.0","request_time":1.8913743}
+{"registered_at":"2020-09-26T20:48:55.182+00:00","pid":7,"thread_id":3380,"message":"Puma starting in single mode..."}
+{"registered_at":"2020-09-26T20:48:55.182+00:00","pid":7,"thread_id":3380,"message":"* Version 5.0.0 (ruby 2.7.1-p83), codename: Spoony Bard"}
+{"registered_at":"2020-09-26T20:48:55.182+00:00","pid":7,"thread_id":3380,"message":"* Min threads: 4, max threads: 20"}
+{"registered_at":"2020-09-26T20:48:55.182+00:00","pid":7,"thread_id":3380,"message":"* Environment: production"}
+{"registered_at":"2020-09-26T20:48:55.464+00:00","pid":7,"thread_id":3380,"message":"* Listening on http://0.0.0.0:8080"}
+{"registered_at":"2020-09-26T20:48:55.464+00:00","pid":7,"thread_id":3380,"message":"Use Ctrl-C to stop"}
+{"level":"INFO","prog_name":"Controllers::API::V1::MoviesController","pid":7,"thread_id":3720,"registered_at":"2020-09-26T20:48:57.928+00:00","message":"Asking film specialist..."}
+{"level":"DEBUG","prog_name":"Business::FilmSpecialist","pid":7,"thread_id":3720,"registered_at":"2020-09-26T20:48:57.928+00:00","message":"Consulting movies warehouse..."}
+{"level":"INFO","prog_name":"Controllers::API::V1::MoviesController","pid":7,"thread_id":3720,"registered_at":"2020-09-26T20:48:58.805+00:00","message":"Sleeping the following number of seconds: 1"}
+{"level":"DEBUG","prog_name":"Controllers::API::V1::MoviesController","pid":7,"thread_id":3720,"registered_at":"2020-09-26T20:48:59.807+00:00","message":"Character and movie: Carc / Hobbit"}
+{"ip_address":"172.25.0.1","registered_at":"2020-09-26T20:48:59.814+00:00","pid":7,"thread_id":3720,"request_id":null,"method":"GET","path":"/api/v1/movies","query":"?greg=mygod&aaaaa=bb","version":"HTTP/1.1","status":"200","response_length":"37","referer":null,"user_agent":"HTTPie/2.2.0","request_time":1.8913743}
 ```
 
 ## Running all tests
@@ -71,13 +73,15 @@ Execute the following command:
 And you'll see something like:
 
 ```
-Finished in 0.96628 seconds (files took 0.43692 seconds to load)
-5 examples, 0 failures
+Finished in 0.11874 seconds (files took 0.75679 seconds to load)
+11 examples, 0 failures
+
+Coverage report generated for RSpec to /app/coverage. 269 / 276 LOC (97.46%) covered.
 ```
 
 ## Purpose
 
-The idea here is to delay 1 second or more (given you custom configuration) to answer a request, thus you can use this behavior for interesting tests, like dispatching 10 requests from you back-end to this service and do it efficiently with some approaches like through [Threads](https://en.wikipedia.org/wiki/Thread_(computing)#Thread_and_fiber_issues) or [Coroutines](https://en.wikipedia.org/wiki/Coroutine). See this flow which I used for a [RoR project emulating a Hangman game through an API](https://github.com/willianantunes/hangman-ruby-playground/):
+The idea here is to delay 1 second or more (given your custom configuration) to answer a request, thus you can use this behavior for interesting tests, like dispatching 10 requests from your back-end to this service and do it efficiently with some approaches like through [Threads](https://en.wikipedia.org/wiki/Thread_(computing)#Thread_and_fiber_issues) or [Coroutines](https://en.wikipedia.org/wiki/Coroutine). See this flow which I used for a [RoR project emulating a Hangman game through an API](https://github.com/willianantunes/hangman-ruby-playground/):
 
 ![Sample usage of the Runner #SaidNoOneEver](docs/sample-usage.png)
 
