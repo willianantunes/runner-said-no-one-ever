@@ -10,7 +10,7 @@ services:
     volumes:
       - .:/app
   tests:
-    image: ruby:2.7.1
+    image: ruby:2.7.2
     working_dir: /app
     volumes:
       - .:/app
