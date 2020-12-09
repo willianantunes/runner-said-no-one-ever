@@ -1,6 +1,13 @@
 # Runner [#SaidNoOneEver](https://twitter.com/hashtag/SaidNoOneEver?src=hashtag_click)
 
 ![Build and publish](https://github.com/willianantunes/runner-said-no-one-ever/workflows/Build%20and%20publish/badge.svg?branch=master)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=willianantunes_runner-said-no-one-ever&metric=coverage)](https://sonarcloud.io/dashboard?id=willianantunes_runner-said-no-one-ever)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=willianantunes_runner-said-no-one-ever&metric=ncloc)](https://sonarcloud.io/dashboard?id=willianantunes_runner-said-no-one-ever)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=willianantunes_runner-said-no-one-ever&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=willianantunes_runner-said-no-one-ever)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=willianantunes_runner-said-no-one-ever&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=willianantunes_runner-said-no-one-ever)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=willianantunes_runner-said-no-one-ever&metric=security_rating)](https://sonarcloud.io/dashboard?id=willianantunes_runner-said-no-one-ever)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=willianantunes_runner-said-no-one-ever&metric=sqale_index)](https://sonarcloud.io/dashboard?id=willianantunes_runner-said-no-one-ever)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=willianantunes_runner-said-no-one-ever&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=willianantunes_runner-said-no-one-ever)
 
 Find a movie or a character from it and this API will reply to you as soon as possible #SaidNoOneEver.
 
